@@ -101,6 +101,7 @@ exclude:
 ignore:
   - "run.bat"
   - "log.log"
+  - "README.md"
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
