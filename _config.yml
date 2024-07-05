@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://mllt992.github.io/cnblogs
-root: /cnblogs/
+root: /
 #permalink: :year/:month/:hash/
 permalink: /post/:title.html
 permalink_defaults:
