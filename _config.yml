@@ -8,12 +8,13 @@ subtitle: '重庆乖乖狼科技有限责任公司'
 description: '乖乖狼科技 CTO 萌狼蓝天 的 个人博客'
 keywords:
 author: "萌狼蓝天"
-language: "zh-cn"
+language: "zh"
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://blog.mllt.cc
+url: https://mllt992.github.io/cnblogs
+root: /cnblogs/
 #permalink: :year/:month/:hash/
 permalink: /post/:title.html
 permalink_defaults:
@@ -106,5 +107,5 @@ theme: aurora
 deploy:
   type: 'git'
   repo: "https://github.com/mllt992/cnblogs.git"
-  branch: main
+  branch: web
   message: "自动提交"
