@@ -14,45 +14,18 @@ for /f "tokens=1-2 delims=:." %%a in ('time /T') do (
 set commitMessage=bat%run% %year%-%month%-%day% %hour%:%min%
 
 :: 初始化日志文件
->nul 2>&1 echo.>"log.log"
+powershell -Command "Add-Content -Path 'log.log' -Value ''" >nul 2>&1
 
 :: 执行Git命令
 echo Executing git commands...
-(
-    git add --all .
-    IF %ERRORLEVEL% NEQ 0 (
-        echo Git add failed. >> log.log
-        goto :end
-    )
-    git commit -m "!commitMessage!"
-    IF %ERRORLEVEL% NEQ 0 (
-        echo Git commit failed. >> log.log
-        goto :end
-    )
-    git push origin main
-    IF %ERRORLEVEL% NEQ 0 (
-        echo Git push failed. >> log.log
-        goto :end
-    )
-) >> log.log 2>&1
+powershell -Command "&{git add --all .; if ($LASTEXITCODE -ne 0) { Add-Content -Path 'log.log' -Value 'Git add failed.' } else { git commit -m '!commitMessage!'; if ($LASTEXITCODE -ne 0) { Add-Content -Path 'log.log' -Value 'Git commit failed.' } else { git push origin main; if ($LASTEXITCODE -ne 0) { Add-Content -Path 'log.log' -Value 'Git push failed.' } } } }"
 
 :: 执行Hexo命令
 echo Executing Hexo commands...
-(
-    hexo clean
-    IF %ERRORLEVEL% NEQ 0 (
-        echo Hexo clean failed. >> log.log
-        goto :end
-    )
-    hexo deploy
-    IF %ERRORLEVEL% NEQ 0 (
-        echo Hexo deploy failed. >> log.log
-        goto :end
-    )
-) >> log.log 2>&1
+powershell -Command "&{hexo clean; if ($LASTEXITCODE -ne 0) { Add-Content -Path 'log.log' -Value 'Hexo clean failed.' } else { hexo deploy; if ($LASTEXITCODE -ne 0) { Add-Content -Path 'log.log' -Value 'Hexo deploy failed.' } } }"
 
 :: 成功信息
-echo All commands executed successfully! >> log.log
+powershell -Command "Add-Content -Path 'log.log' -Value 'All commands executed successfully!'"
 
 :end
 echo Execution complete. Check 'log.log' for detailed results.
