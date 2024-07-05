@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://mllt992.github.io/cnblogs
-root: /
+root: /cnblogs/
 #permalink: :year/:month/:hash/
 permalink: /post/:title.html
 permalink_defaults:
@@ -94,6 +94,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - .nojekyll
 exclude:
 ignore:
 
