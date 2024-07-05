@@ -13,8 +13,8 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://mllt992.github.io/cnblogs
-root: /cnblogs/
+url: https://mllt992.github.io
+root: /
 #permalink: :year/:month/:hash/
 permalink: /post/:title.html
 permalink_defaults:
@@ -107,6 +107,6 @@ theme: aurora
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: "https://github.com/mllt992/cnblogs.git"
+  repo: "https://github.com/mllt992/mllt992.github.io.git"
   branch: web
   message: "自动提交"
