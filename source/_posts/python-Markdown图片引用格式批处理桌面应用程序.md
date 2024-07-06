@@ -1,7 +1,7 @@
 ---
 title: '[python]Markdown图片引用格式批处理桌面应用程序'
 date: 2024-07-06 07:36:35
-tags:
+tags:[python]
 ---
 
 ## 需求
