@@ -18,7 +18,9 @@ tags:[python]
 
 ①https://www.rfc-editor.org/rfc/rfc5322 
 
-②https://www.rfc-editor.org/rfc/rfc822 ③https://www.rfc-editor.org/rfc/rfc2047
+②https://www.rfc-editor.org/rfc/rfc822 
+
+③https://www.rfc-editor.org/rfc/rfc2047
 
 
 
@@ -143,3 +145,8 @@ if __name__ == '__main__':
 
 ```
 
+## 建议
+
+不要使用个人163邮箱，很容易封号
+
+推荐使用网易免费域名邮箱
